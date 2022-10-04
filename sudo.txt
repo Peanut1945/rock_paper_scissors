@@ -8,6 +8,13 @@ function getcomputerchoices:
 
 function playsagame(playerselction,computerselection):
     plays a game
+    scissors beats paper
+    rock beats scissors
+    paper beats rock
+    rock ties rock
+    paper ties paper
+    scissors tie scissors
+
     returns result
 
 
