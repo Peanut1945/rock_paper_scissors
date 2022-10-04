@@ -1,0 +1,13 @@
+make sure all inputs are case sensative ( so turn them all to upper case)
+
+function getcomputerchoices:
+    returns scissors , rock or paper
+    takes random number between 0 and 1
+    if 3.3> returns scissors
+    if 3.3< and 6.6> returns rock 
+
+function playsagame(playerselction,computerselection):
+    plays a game
+    returns result
+
+
