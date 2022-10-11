@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    background-color: #2c2e43;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.flex-container{
+    display: flex;
+}
+/* this raea if for the hero top of the page*/
+.hero{
+    background-color: #ffd523;
+    margin: 0;
+    margin-bottom: 10em;
+    padding: 2em;
+    flex-direction: column;
+    box-shadow: 0 0 2rem;
+
+}
+
+#Heading{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    justify-self: center;
+    align-self: center;
+    /*padding-left: 3em */
+    text-shadow: 2rem;
+    
+}
+#sub-heading{
+    font-style: italic;
+}
+
+/*this area if for the operatios and user inputs*/
+ul{
+    
+    list-style: none;
+    justify-content: center;
+    gap: 7em;
+    margin-right: 10px;
+
+}
+
+button{
+    color: rgb(20, 120, 170);
+    border: 3px #595260 solid;
+    background-color: #B2B1B9;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 6px;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: all 0.05s ease;
+    box-shadow: 0 0 1rem black;
+}
+/* this area is for javascript conditionals*/
+.button-down{
+    transform: scale(0.8);
+    
+
+}
+.hover{
+    background-color: #2c2e43;
+}
+

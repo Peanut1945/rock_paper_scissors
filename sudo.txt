@@ -1,5 +1,13 @@
 make sure all inputs are case sensative ( so turn them all to upper case)
 
+function game():
+    for i in range (5):
+        playsgame()
+        if winner  = player:
+            player total  ++
+        els if winner = computer:
+            computer total ++
+
 function getcomputerchoices:
     returns scissors , rock or paper
     takes random number between 0 and 1
@@ -18,3 +26,15 @@ function playsagame(playerselction,computerselection):
     returns result
 
 
+
+buttons checks:
+
+querey select all biuttons 
+add check for key down->then add button down class
+add check foe key up -> remove button down class
+add check for hover -> add hover (increase size)
+add check for mouse exit-> remove hover class
+
+
+next we need to check for which button was pressed
+so key up gets put onto all butons indevidualy under there name. this allows for tracback
