@@ -38,3 +38,25 @@ add check for mouse exit-> remove hover class
 
 next we need to check for which button was pressed
 so key up gets put onto all butons indevidualy under there name. this allows for tracback
+
+i dont know how to do this , but :
+create new div:
+have class for displaying infomation
+have 2 divs inside one is fixed on gets re-writen to hold score
+have this twice. once for player and once for computer
+
+points-box-computer querey search 
+points-box-player querey search 
+
+points-div-player create element
+points-div-computer create elemtent
+
+points-div-player textContent (insert points)
+points-div-player textContent (insert points)
+
+points-box-computer .removeChild
+points-box-player .removeChild
+
+points-box-computer .appendchild
+points-box-player .appendchild
+

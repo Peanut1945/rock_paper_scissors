@@ -5,6 +5,7 @@ let condition = ""
 let playercount = 0
 let copmutercount = 0
 let play = ""
+let end = false
 
 
 function computerchoice(){
@@ -21,14 +22,15 @@ function computerchoice(){
 
 }
 function comparison(playeroption,computerchoice){
-    console.log(computerchoice)
     console.log(playeroption)
     if (playeroption == "ROCK"){
         if (computerchoice == "SCISSORS"){
             winner = "player wins! "
+            playercount ++
             condition = "rock beats scissors"
         }else if (computerchoice == "PAPER"){
             winner = "computer wins! "
+            copmutercount ++
             condition = "paper beats rock"
         }else{
             winner = "its a tie: "
@@ -37,9 +39,11 @@ function comparison(playeroption,computerchoice){
     }else if (playeroption == "SCISSORS"){
         if (computerchoice == "PAPER"){
             winner = "player wins! "
+            playercount ++
             condition = "scissors beats paper"
         }else if (computerchoice == "ROCK"){
             winner = "computer wins! "
+            copmutercount ++
             condition = "rock beats scissors"
         }else{
             winner = "its a tie: "
@@ -48,9 +52,11 @@ function comparison(playeroption,computerchoice){
     }else if (playeroption == "PAPER"){
         if (computerchoice == "ROCK"){
             winner = "player wins! "
+            playercount ++
             condition = "paper beats rock"
         }else if (computerchoice == "SCISSORS"){
             winner = "computer wins! "
+            copmutercount ++
             condition = "scissors beats paper"
         }else{
             winner = "its a tie: "
@@ -96,19 +102,41 @@ rock.addEventListener("mouseup", () => {
     rock.classList.remove("button-down")
     computerchoice()
     comparison("ROCK",compvalue)
-    console.log(winner)
+    console.log(playercount)
+    console.log(copmutercount)
+    if (playerScore != playercount){
+        playerScore.textContent = playercount
+    }
+    if (computerScore != copmutercount){
+        computerScore.textContent = copmutercount
+    }
+    if(playercount <6 && copmutercount <6){
+        console.log(winner)
+    }
 })
 paper.addEventListener("mouseup", () => {
     paper.classList.remove("button-down")
     computerchoice()
     comparison("PAPER", compvalue)
     console.log(winner)
+    if (playerScore != playercount){
+        playerScore.textContent = playercount
+    }
+    if (computerScore != copmutercount){
+        computerScore.textContent = copmutercount
+    }
 })
 scissors.addEventListener("mouseup", () => {
     scissors.classList.remove("button-down")
     computerchoice()
     comparison("SCISSORS", compvalue)
     console.log(winner)
+    if (playerScore != playercount){
+        playerScore.textContent = playercount
+    }
+    if (computerScore != copmutercount){
+        computerScore.textContent = copmutercount
+    }
 })
 
 
@@ -123,4 +151,12 @@ buttons.forEach( button => {
         button.classList.remove("button-down")
     })
 })
+//here is am going to make the point counters
+const playerScore = document.querySelector(".player-score")
+const computerScore = document.querySelector(".computer-score")
+ 
+//const playerScore = document.createElement("div")
+//const computerScore = document.createElement("div")
 
+playerScore.textContent = playercount
+computerScore.textContent = copmutercount

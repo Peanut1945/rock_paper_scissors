@@ -36,6 +36,44 @@ body{
     font-style: italic;
 }
 
+/*below here is all the main page styles*/
+
+.score{
+    margin-top: 8em ;
+    margin-right: 10px;
+    gap: 6em;
+    align-content: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #ffd523;
+}
+.test-box{
+    padding: 0;
+    margin: 0;
+    padding-top: 3em ;
+    justify-content: center;
+    align-items: center;
+}
+.total-winner-box{
+    width: 8em;
+    height: 5em;
+    background-color: #B2B1B9;
+    align-content: center;
+    justify-content: center;
+    justify-self: center;
+    margin-right: 20px;
+    border-radius: 8px;
+    border:6px #595260 double;
+    
+}
+.player-score,
+.computer-score{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+.player-score{
+    padding-left: 24px;
+}
 /*this area if for the operatios and user inputs*/
 ul{
     
