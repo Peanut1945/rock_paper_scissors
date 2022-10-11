@@ -9,16 +9,20 @@ let play = ""
 
 function computerchoice(){
     compnum = Math.random()
+    console.log(compnum)
     if(compnum <= 0.3333){
-        compvalue = "scissors"
+        compvalue = "SCISSORS"
     }else if(compnum >= 0.3333 && compnum <= 0.6666){
-        compvalue = "rock"
+        compvalue = "ROCK"
     }else {
-        compvalue = "paper"
+        compvalue = "PAPER"
     }
+    console.log(compvalue)
 
 }
 function comparison(playeroption,computerchoice){
+    console.log(computerchoice)
+    console.log(playeroption)
     if (playeroption == "ROCK"){
         if (computerchoice == "SCISSORS"){
             winner = "player wins! "
@@ -73,4 +77,50 @@ function games(){
     }
 }
 
-games()
+
+const buttons = document.querySelectorAll("button")
+const rock = document.querySelector(".rock")
+const paper = document.querySelector(".paper")
+const scissors = document.querySelector(".scissors")
+
+//event listeners
+buttons.forEach( button => {
+    button.addEventListener("mousedown",() => {
+        button.classList.add('button-down')
+
+    })
+})
+
+
+rock.addEventListener("mouseup", () => {
+    rock.classList.remove("button-down")
+    computerchoice()
+    comparison("ROCK",compvalue)
+    console.log(winner)
+})
+paper.addEventListener("mouseup", () => {
+    paper.classList.remove("button-down")
+    computerchoice()
+    comparison("PAPER", compvalue)
+    console.log(winner)
+})
+scissors.addEventListener("mouseup", () => {
+    scissors.classList.remove("button-down")
+    computerchoice()
+    comparison("SCISSORS", compvalue)
+    console.log(winner)
+})
+
+
+buttons.forEach( button => {
+    button.addEventListener("mouseenter", () => {
+        button.classList.add('hover')
+    })
+})
+buttons.forEach( button => {
+    button.addEventListener("mouseleave", () => {
+        button.classList.remove('hover')
+        button.classList.remove("button-down")
+    })
+})
+
