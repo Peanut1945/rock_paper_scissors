@@ -1,4 +1,4 @@
 # rock_paper_scissors
 for the Odin project
-i am making this with just java script so that i can get some practive ill make a gui later
+this is just a small webpage with ui so that i could practice. you play to five with a randoly generated computer.
 
