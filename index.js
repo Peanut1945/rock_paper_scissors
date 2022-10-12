@@ -33,7 +33,7 @@ function comparison(playeroption,computerchoice){
             copmutercount ++
             condition = "paper beats rock"
         }else{
-            winner = "its a tie: "
+            winner = "its a tie "
             condition = "rock ties with rock"
         }
     }else if (playeroption == "SCISSORS"){
@@ -46,7 +46,7 @@ function comparison(playeroption,computerchoice){
             copmutercount ++
             condition = "rock beats scissors"
         }else{
-            winner = "its a tie: "
+            winner = "its a tie "
             condition = "scissors tie with scissors"
         }
     }else if (playeroption == "PAPER"){
@@ -59,7 +59,7 @@ function comparison(playeroption,computerchoice){
             copmutercount ++
             condition = "scissors beats paper"
         }else{
-            winner = "its a tie: "
+            winner = "its a tie "
             condition = "paper ties with paper"
         }
     }
@@ -82,12 +82,21 @@ function games(){
         console.log("computer: ", copmutercount)
     }
 }
+//this function if for adding a winner to the winner in the middle of the page
 
+function appendroundwinner(){
+    
+    roundAwnser.textContent = winner
+    conditionAwnser.textContent = condition
+}
 
+//here are all of my query selectors
 const buttons = document.querySelectorAll("button")
 const rock = document.querySelector(".rock")
 const paper = document.querySelector(".paper")
 const scissors = document.querySelector(".scissors")
+const roundAwnser = document.querySelector(".awnser")
+const conditionAwnser = document.querySelector(".condition")
 
 //event listeners
 buttons.forEach( button => {
@@ -113,6 +122,7 @@ rock.addEventListener("mouseup", () => {
     if(playercount <6 && copmutercount <6){
         console.log(winner)
     }
+    appendroundwinner()
 })
 paper.addEventListener("mouseup", () => {
     paper.classList.remove("button-down")
@@ -125,6 +135,7 @@ paper.addEventListener("mouseup", () => {
     if (computerScore != copmutercount){
         computerScore.textContent = copmutercount
     }
+    appendroundwinner()
 })
 scissors.addEventListener("mouseup", () => {
     scissors.classList.remove("button-down")
@@ -137,6 +148,7 @@ scissors.addEventListener("mouseup", () => {
     if (computerScore != copmutercount){
         computerScore.textContent = copmutercount
     }
+    appendroundwinner()
 })
 
 
@@ -151,12 +163,14 @@ buttons.forEach( button => {
         button.classList.remove("button-down")
     })
 })
+//im just running initial codes down here pls dont look
 //here is am going to make the point counters
 const playerScore = document.querySelector(".player-score")
 const computerScore = document.querySelector(".computer-score")
- 
-//const playerScore = document.createElement("div")
-//const computerScore = document.createElement("div")
 
 playerScore.textContent = playercount
 computerScore.textContent = copmutercount
+//for the scores
+roundAwnser.textContent = "play to see who wins"
+conditionAwnser.textContent = condition
+

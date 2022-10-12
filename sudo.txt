@@ -60,3 +60,5 @@ points-box-player .removeChild
 points-box-computer .appendchild
 points-box-player .appendchild
 
+i need to go back and add places where it pastes the round winner and why they won. this is going to be pretty easy 
+and im to lazy to type it in sudo code:)

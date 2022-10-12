@@ -14,7 +14,7 @@ body{
 .hero{
     background-color: #ffd523;
     margin: 0;
-    margin-bottom: 10em;
+    margin-bottom: 7em;
     padding: 2em;
     flex-direction: column;
     box-shadow: 0 0 2rem;
@@ -37,6 +37,20 @@ body{
 }
 
 /*below here is all the main page styles*/
+.choice-box{
+    align-items: center;
+    /*gap: 19em;*/
+    color: #B2B1B9;
+    margin-top: 6em;
+    text-shadow: 0 0 1rem #ffd523;
+    flex-direction: column;
+}
+.awnser{
+    justify-self: flex-end;
+    font-size: 35px;
+    font-weight: 1000;
+    margin-bottom: 2em;
+}
 
 .score{
     margin-top: 8em ;
