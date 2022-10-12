@@ -89,6 +89,20 @@ function appendroundwinner(){
     roundAwnser.textContent = winner
     conditionAwnser.textContent = condition
 }
+function gameover (){
+    if(playercount == 5 || copmutercount == 5){
+        roundAwnser.textContent = "game over"
+        if ( playercount > copmutercount){
+            totaleWinnerBox.textContent = "Player wins! well done! re-start to play again"
+            console.log("i like the player")
+        }
+        if ( copmutercount > playercount){
+            totaleWinnerBox.textContent = "computer wins! please re-load to try again"
+            console.log("ilike the computer")
+        }
+    }
+
+}
 
 //here are all of my query selectors
 const buttons = document.querySelectorAll("button")
@@ -97,7 +111,7 @@ const paper = document.querySelector(".paper")
 const scissors = document.querySelector(".scissors")
 const roundAwnser = document.querySelector(".awnser")
 const conditionAwnser = document.querySelector(".condition")
-
+const totaleWinnerBox = document.querySelector(".total-winner-box")
 //event listeners
 buttons.forEach( button => {
     button.addEventListener("mousedown",() => {
@@ -109,46 +123,55 @@ buttons.forEach( button => {
 
 rock.addEventListener("mouseup", () => {
     rock.classList.remove("button-down")
-    computerchoice()
-    comparison("ROCK",compvalue)
-    console.log(playercount)
-    console.log(copmutercount)
-    if (playerScore != playercount){
-        playerScore.textContent = playercount
+    if (playercount <5 && copmutercount <5 ){
+        computerchoice()
+        comparison("ROCK",compvalue)
+        console.log(playercount)
+        console.log(copmutercount)
+        if (playerScore != playercount){
+            playerScore.textContent = playercount
+        }
+        if (computerScore != copmutercount){
+            computerScore.textContent = copmutercount
+        }
+        if(playercount <6 && copmutercount <6){
+            console.log(winner)
+        }
+        appendroundwinner()
     }
-    if (computerScore != copmutercount){
-        computerScore.textContent = copmutercount
-    }
-    if(playercount <6 && copmutercount <6){
-        console.log(winner)
-    }
-    appendroundwinner()
+    gameover ()
 })
 paper.addEventListener("mouseup", () => {
     paper.classList.remove("button-down")
-    computerchoice()
-    comparison("PAPER", compvalue)
-    console.log(winner)
-    if (playerScore != playercount){
-        playerScore.textContent = playercount
+    if (playercount <5 && copmutercount <5){
+        computerchoice()
+        comparison("PAPER", compvalue)
+        console.log(winner)
+        if (playerScore != playercount){
+            playerScore.textContent = playercount
+        }
+        if (computerScore != copmutercount){
+            computerScore.textContent = copmutercount
+        }
+        appendroundwinner()
     }
-    if (computerScore != copmutercount){
-        computerScore.textContent = copmutercount
-    }
-    appendroundwinner()
+    gameover ()
 })
 scissors.addEventListener("mouseup", () => {
     scissors.classList.remove("button-down")
-    computerchoice()
-    comparison("SCISSORS", compvalue)
-    console.log(winner)
-    if (playerScore != playercount){
-        playerScore.textContent = playercount
+    if (playercount <5 && copmutercount <5){
+        computerchoice()
+        comparison("SCISSORS", compvalue)
+        console.log(winner)
+        if (playerScore != playercount){
+            playerScore.textContent = playercount
+        }
+        if (computerScore != copmutercount){
+            computerScore.textContent = copmutercount
+        }
+        appendroundwinner()
     }
-    if (computerScore != copmutercount){
-        computerScore.textContent = copmutercount
-    }
-    appendroundwinner()
+    gameover ()
 })
 
 
@@ -173,4 +196,6 @@ computerScore.textContent = copmutercount
 //for the scores
 roundAwnser.textContent = "play to see who wins"
 conditionAwnser.textContent = condition
+
+totaleWinnerBox.textContent = "winner goes here"
 

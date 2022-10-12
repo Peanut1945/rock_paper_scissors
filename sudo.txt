@@ -62,3 +62,8 @@ points-box-player .appendchild
 
 i need to go back and add places where it pastes the round winner and why they won. this is going to be pretty easy 
 and im to lazy to type it in sudo code:)
+
+over all winner box:
+add while loop over event listeners that end when over 5
+adding winer to box:
+
